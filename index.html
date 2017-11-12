@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+    <title>Kinematics Simulation of 2 Link Manipulator</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        Kinematics of 2 Link Robot Arm
+    </header>
+    <div class="container">
+        <div id="playground">
+            <!-- <div class="boundary"></div> -->
+            <div id="joint-1" class="joint">
+            </div>
+            <div id="link-1" class="link">
+                <div id="joint-2" class="joint">
+                </div>
+                <div id="link-2" class="link">
+                </div>
+            </div>
+        </div>
+
+        <div id="controls">
+            <h3>State of the system</h3>
+            <div class="type links">
+                <h4>Link Lengths</h4>
+                <div class="column-wrapper">
+                    <p class="link-length">
+                        Link 1:
+                        <span id="link-1-length">0</span>                
+                    </p>
+                    <p class="link-length">
+                        Link 2:
+                        <span id="link-2-length">0</span>                
+                    </p>
+                </div>
+            </div>
+
+            <div class="type joints">
+                <h4>Joint Values</h4>
+                <div class="column-wrapper">
+                    <p class="joint-value">
+                        Joint 1:
+                        <input id="joint-1-value" type="number"><span>deg</span>               
+                    </p>
+                    <p class="joint-value">
+                        Joint 2:
+                        <input id="joint-2-value" type="number"><span>deg</span>             
+                    </p>
+                </div>
+            </div>
+
+            <div class="type end-effector">
+                <h4>End Effector Position</h4>
+                <div class="column-wrapper">
+                    <p>
+                        X :
+                        <input id="x-value" type="number">              
+                    </p>
+                    <p>
+                        Y :
+                        <input id="y-value" type="number">            
+                    </p>
+                </div>
+            </div>
+
+            <div class="type play-btns">
+                <h4>Play Inverse Kinematics Result</h4>
+                <div class="column-wrapper">
+                    <button id="sol-1" disabled>Solution 1</button>
+                    <button id="sol-2" disabled>Solution 2</button>         
+                </div>
+            </div>
+
+            <div class="info">
+                <p class="message"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="modal-wrapper">
+        <div class="modal">
+            <p class="message"></p>
+            <button class="close-modal">Close</button>
+        </div>
+    </div> -->
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/TweenMax.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
